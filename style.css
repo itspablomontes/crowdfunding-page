@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "Commissioner", sans-serif;
+    font-size: 16px;
+}
+header{
+    background-color: hsl(176, 72%, 28%);
+    background-image: url(/assets/image-hero-mobile.jpg);
+    background-size: cover;
+    height: 250px;
+    padding-inline: 15px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header img{
+    height: 20px;
+    margin-top: 20px;
+    align-self: flex-start;
+}
+.nav-links{
+    display: none;
+}
+.off-screen-menu{
+    background-color: hsl(176, 50%, 47%);
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3 ease;
+}
+.off-screen-menu.active{
+    right: 0;
+    
+}
+.menu-links{
+    list-style-type: none;
+}
+
+.menu-links a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+nav{
+    display: flex;
+}
+.menu{
+    height: 30px;
+    width: 25px;
+    margin-left: auto;
+    position: relative;
+    margin-top: 15px;
+}
+.menu span{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3 ease;
+}
+.menu span:nth-child(1) {
+    top: 25%;
+}
+.menu span:nth-child(3) {
+    top: 75%;
+}
+.menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+} 
+
+
+
+
+#main-container{
+    padding-inline: 15px;
+}
