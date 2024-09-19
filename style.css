@@ -7,6 +7,7 @@
 body{
     font-family: "Commissioner", sans-serif;
     font-size: 16px;
+    background-color: lightgray
 }
 header{
     background-color: hsl(176, 72%, 28%);
@@ -100,4 +101,52 @@ nav{
 
 #main-container{
     padding-inline: 15px;
+    justify-content: center;
+    align-items: center;
+}
+#title-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-inline: 15px;
+    padding-bottom: 15px;
+    border-radius: 15px;
+    background-color: white;
+    gap: 20px;
+    margin-top: -50px;
+}
+.title{
+    font-weight: bold;
+    font-size: 22px;
+}
+#circle-logo{
+    width: 60px;
+    align-self: center;
+    margin-top: -30px;
+}
+.title-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+#bookmark{
+    border: none;
+    background-color: white;
+}
+#bookmark img{
+    width: 50px;
+}
+#back-project{
+    background-color: hsl(176, 72%, 28%);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 16px 15px;
+    font-weight: bold;
+}
+#back-project:hover{
+    background-color: white;
+    border: solid hsl(176, 72%, 28%);
+    color: hsl(176, 72%, 28%);
 }
