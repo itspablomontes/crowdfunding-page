@@ -168,7 +168,7 @@ nav{
 }
 .main-text{
     font-weight: bold;
-    font-size: 22px;
+    font-size: 28px;
 }
 .secondary-text{
     color: hsl(0, 0%, 48%);
@@ -247,11 +247,19 @@ nav{
     font-weight: bold;
     width: 12em;
 }
-
+.button-reward:hover{
+    background-color: white;
+    border: solid hsl(176, 50%, 47%);
+    color: hsl(176, 50%, 47%);
+}
 
 .no-spots {
     opacity: 40%;
 }
 .no-spots .button-reward{
     background-color: hsl(0, 0%, 48%);
+}
+
+.no-spots .button-reward:hover{
+    display: none;
 }
