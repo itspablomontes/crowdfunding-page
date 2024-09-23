@@ -27,6 +27,7 @@ header img{
 }
 .nav-links{
     display: none;
+    list-style-type: none;
 }
 .off-screen-menu{
     background-color: hsl(176, 50%, 47%);
@@ -134,11 +135,14 @@ nav{
     justify-content: center;
     gap: 20px;
 }
-#bookmark{
+#bookmark-desktop{
+    display: none;
+}
+.bookmark{
     border: none;
     background-color: white;
 }
-#bookmark img{
+.bookmark img{
     width: 50px;
 }
 #back-project{
@@ -263,3 +267,127 @@ nav{
 .no-spots .button-reward:hover{
     display: none;
 }
+
+
+@media (min-width: 520px) { 
+
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-inline: 15px;
+    }
+    #main-container{
+        max-width: 80%;
+        align-self: center;
+    }
+    header{
+        width: 100%;
+        padding-inline: 20px;
+        background-image: url(assets/image-hero-desktop.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+ }
+
+ @media (min-width: 1284px) {
+
+
+    #main-container{
+        max-width: 40%;
+        align-self: center;
+    }
+    header{
+        background-image: url(assets/image-hero-desktop.jpg);
+        background-repeat: no-repeat;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        height: 25rem;
+    }
+    header img{
+        margin-left: 200px;
+        margin-top: 40px;
+    }
+
+    .off-screen-menu{
+        display: none;
+    }
+    .menu{
+        display: none;
+    }
+    .nav-links{
+        display: flex;
+        gap: 25px;
+        margin-top: 40px;
+        margin-right: 200px;
+    }
+    .nav-links a{
+        text-decoration: none;
+        color: white;
+    }
+    .nav-links a:hover{
+        font-weight: bold;
+        color: hsl(176, 50%, 47%);
+    }
+
+    #title-container{
+        padding-inline: 60px;
+    }
+
+    .title{
+        font-size: 28px;
+    }
+    .title-buttons{
+        justify-content: space-between;
+    }
+
+   #bookmark{
+    display: none;
+   } 
+   #bookmark-desktop{
+    display: grid;
+    background-color: #F4F4F4;
+    color: #808080;
+    font-weight: bold;
+    border-radius: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 30%;
+    gap: 10px;
+    min-width: 180px;
+   }
+   #bookmark-desktop img{
+    grid-column: 1;
+    grid-row: 1 ;
+   }
+   #bookmark-desktop span{
+    align-self: center;
+    font-size: 18px;
+    padding: 0;
+   }
+   #bookmark-desktop:hover{
+    scale: 1.1;
+   }
+   #back-project{
+    font-size: 16px;
+   }
+
+   #funding-container{
+    padding-inline: 60px;
+   }
+   #numbers-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   }
+
+   #about-container{
+    padding-inline: 60px;
+   }
+   .about-lower{
+    flex-direction: row;
+    justify-content: space-between;
+   }
+ } 
