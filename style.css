@@ -154,9 +154,7 @@ nav{
     font-weight: bold;
 }
 #back-project:hover{
-    background-color: white;
-    border: solid hsl(176, 50%, 47%);
-    color: hsl(176, 50%, 47%);
+    background-color: hsl(176, 72%, 28%)
 }
 
 
@@ -252,9 +250,7 @@ nav{
     width: 12em;
 }
 .button-reward:hover{
-    background-color: white;
-    border: solid hsl(176, 50%, 47%);
-    color: hsl(176, 50%, 47%);
+    background-color: hsl(176, 72%, 28%)
 }
 
 .no-spots {
@@ -264,9 +260,6 @@ nav{
     background-color: hsl(0, 0%, 48%);
 }
 
-.no-spots .button-reward:hover{
-    display: none;
-}
 
 
 @media (min-width: 520px) { 
