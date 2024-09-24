@@ -120,6 +120,9 @@ nav{
     margin-top: -50px;
     margin-bottom: 20px;
 }
+#title-container p{
+    color: hsl(0, 0%, 48%);
+}
 .title{
     font-weight: bold;
     font-size: 22px;
