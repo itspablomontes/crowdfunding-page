@@ -50,3 +50,24 @@ function toggleBookmarkDesktop() {
 
 bookmarkMobile.onclick = toggleBookmarkMobile;
 bookmarkDesktop.onclick = toggleBookmarkDesktop;
+
+
+
+const buttonReward = document.querySelectorAll('.button-reward');
+const closeReward =  document.querySelector('#toggle-select-reward');
+const modal = document.querySelector('#modal')
+const fade = document.querySelector('#fade-bg');
+
+const toggleModal = () => {
+    modal.classList.toggle("hide");
+    fade.classList.toggle("hide");
+}
+
+
+[closeReward, fade].forEach((elements) => {
+    elements.addEventListener('click', () => toggleModal());
+});
+
+buttonReward.forEach((elements) => {
+    elements.addEventListener('click', () => toggleModal()) 
+});
