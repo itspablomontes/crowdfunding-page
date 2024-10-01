@@ -352,6 +352,9 @@ nav{
     padding: 20px;
     gap: 20px;
 }
+.reward-box.chosen-reward-box{
+    border: solid 1px hsl(176, 50%, 47%);
+}
 .reward-box-title{
     font-weight: bold;
 }
@@ -381,13 +384,16 @@ nav{
 }
 
 .pledge-hidden-container{
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     border-top: 1px #808080 solid;
     box-sizing: border-box;
     padding-block: 20px;
     gap: 20px;
+}
+.pledge-hidden-container.hide{
+    display: none;
 }
 .enter-pledge{
     color: hsl(0, 0%, 48%);

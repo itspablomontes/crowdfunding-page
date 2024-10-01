@@ -71,3 +71,72 @@ const toggleModal = () => {
 buttonReward.forEach((elements) => {
     elements.addEventListener('click', () => toggleModal()) 
 });
+
+const chosenRewardBox = document.querySelector('.chosen-reward-box');
+
+const noRewardRadio = document.querySelector('#no-reward');
+const bambooStandRadio = document.querySelector('#bamboo-stand');
+const blackEditionRadio = document.querySelector('#black-edition');
+const mahogamyRadio = document.querySelector('#mahogamy');
+
+const hiddenNoReward = document.querySelector('#hidden-no-reward');
+const hiddenBambooStand = document.querySelector('#hidden-bamboo-stand');
+const hiddenBlackEdition = document.querySelector('#hidden-black-edition');
+const hiddenMahogamy = document.querySelector('#hidden-mahogamy');
+
+const pledgeNoReward = document.querySelector('#pledge-no-reward');
+const pledgeBambooStand = document.querySelector('#pledge-bamboo-stand');
+const pledgeBlackEdition = document.querySelector('#pledge-black-edition');
+const pledgeMahogamy = document.querySelector('#pledge-mahogamy');
+
+noRewardRadio.addEventListener('change', () => {
+
+        pledgeNoReward.classList.add('chosen-reward-box');
+        pledgeBambooStand.classList.remove('chosen-reward-box');
+        pledgeBlackEdition.classList.remove('chosen-reward-box');
+        pledgeMahogamy.classList.remove('chosen-reward-box');
+
+        hiddenNoReward.classList.remove('hide');
+        hiddenBambooStand.classList.add('hide');
+        hiddenBlackEdition.classList.add('hide');
+        hiddenMahogamy.classList.add('hide');
+});
+
+bambooStandRadio.addEventListener('change', () => {
+
+    pledgeNoReward.classList.remove('chosen-reward-box');
+    pledgeBambooStand.classList.add('chosen-reward-box');
+    pledgeBlackEdition.classList.remove('chosen-reward-box');
+    pledgeMahogamy.classList.remove('chosen-reward-box');
+
+    hiddenNoReward.classList.add('hide');
+    hiddenBambooStand.classList.remove('hide');
+    hiddenBlackEdition.classList.add('hide');
+    hiddenMahogamy.classList.add('hide');
+});
+
+blackEditionRadio.addEventListener('change', () => {
+
+    pledgeNoReward.classList.remove('chosen-reward-box');
+    pledgeBambooStand.classList.remove('chosen-reward-box');
+    pledgeBlackEdition.classList.add('chosen-reward-box');
+    pledgeMahogamy.classList.remove('chosen-reward-box');
+
+    hiddenNoReward.classList.add('hide');
+    hiddenBambooStand.classList.add('hide');
+    hiddenBlackEdition.classList.remove('hide');
+    hiddenMahogamy.classList.add('hide');
+});
+
+mahogamyRadio.addEventListener('change', () => {
+
+    pledgeNoReward.classList.remove('chosen-reward-box');
+    pledgeBambooStand.classList.remove('chosen-reward-box');
+    pledgeBlackEdition.classList.remove('chosen-reward-box');
+    pledgeMahogamy.classList.add('chosen-reward-box');
+
+    hiddenNoReward.classList.add('hide');
+    hiddenBambooStand.classList.add('hide');
+    hiddenBlackEdition.classList.add('hide');
+    hiddenMahogamy.classList.remove('hide');
+});
