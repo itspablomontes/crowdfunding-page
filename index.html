@@ -165,7 +165,7 @@
                     <div class="pledge-input">
                         <div class="pledge-input-component">
                             <span class="dollar-sign">$</span>
-                            <input type="number" placeholder="0" class="money-input">
+                            <input type="number" placeholder="0" class="money-input" value="0">
                         </div>
                         <button class="continue-button" id="" >Continue</button>
                     </div>
@@ -202,7 +202,7 @@
                     <div class="pledge-input">
                         <div class="pledge-input-component">
                             <span class="dollar-sign">$</span>
-                            <input type="number" placeholder="25" class="money-input">
+                            <input type="number" placeholder="25" class="money-input" value="25">
                         </div>
                         <button class="continue-button" id="" >Continue</button>
                     </div>
@@ -239,7 +239,7 @@
                     <div class="pledge-input">
                         <div class="pledge-input-component">
                             <span class="dollar-sign">$</span>
-                            <input type="number" placeholder="75" class="money-input">
+                            <input type="number" placeholder="75" class="money-input" value="75">
                         </div>
                         <button class="continue-button" id="" >Continue</button>
                     </div>
@@ -250,7 +250,7 @@
                 <div class="pledge-choice-component">
                     <div class="reward-check" class="radio">
                             <label for="mahohamy">
-                                <input type="radio" name="reward-choice" id="mahohamy" disabled="disabled" class="radioInput">
+                                <input type="radio" name="reward-choice" id="mahohamy" value="200" disabled="disabled" class="radioInput">
                                 <div class="innerRadio"></div>
                             </label>
                      </div>
@@ -282,6 +282,14 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="thank-you" class="hide">
+            <img src="assets/icon-check.svg" alt="icon check" id="icon-check">
+            <div class="thank-you-title">Thanks for your support</div>
+            <div class="thank-you-text">Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser Worldwide. 
+                You will get an email once our campaign is completed.
+            </div>
+            <button id="close-thank-you">Got it!</button>
         </div>
     <script src="script.js" defer></script>
 </body>

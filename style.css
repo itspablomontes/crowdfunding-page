@@ -272,12 +272,12 @@ nav{
     height: 100%;
     z-index: 5; 
 }
-#fade-bg, #modal{
+#fade-bg, #modal, #thank-you{
     transition: 0.5s;
     opacity: 1;
     pointer-events: all;
 }
-#fade-bg.hide, #modal.hide{
+#fade-bg.hide, #modal.hide, #thank-you{
     opacity: 0;
     pointer-events: none;
 }
@@ -450,7 +450,47 @@ input::-webkit-inner-spin-button {
 .continue-button:hover{
     background-color: hsl(176, 72%, 28%)
 }
-
+#thank-you{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: fixed;
+    overflow-y: auto;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    max-height: 90vh;
+    transform: translate(-50%, -50%);
+    padding-inline: 15px;
+    padding-block: 30px;
+    border: solid 2px #F8F8F8;
+    border-radius: 15px;
+    background-color: white;
+    z-index: 10;
+    max-width: 350px;
+}
+.thank-you-title{
+    font-weight: bold;
+    font-size: 22px;
+}
+.thank-you-text{
+    font-size: 16px;
+    color: hsl(0, 0%, 48%);
+    text-align: center;
+}
+#close-thank-you{
+    background-color: hsl(176, 50%, 47%);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 16px 15px;
+    font-weight: bold;
+    width: 12em;
+}
+#close-thank-you:hover{
+    background-color: hsl(176, 72%, 28%)
+}
 
 @media (min-width: 520px) { 
 
