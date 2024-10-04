@@ -135,9 +135,6 @@ const continueButtons = document.querySelectorAll('.continue-button')
 const closeThankYou =  document.querySelector('#close-thank-you');
 
 
-continueButtons.forEach((button) =>{
-    button.addEventListener('click', () => toggleThankYou())
-})
 
 const toggleThankYou = () => {
     modal.classList.add("hide");
@@ -151,3 +148,52 @@ closeThankYou.addEventListener('click', () => {
     thankYouModal.classList.add("hide");
     fadeThankYou.classList.add('hide');
 })
+
+
+const noRewardInput = document.querySelector('#no-reward-input');
+const noRewardButton = document.querySelector('#no-reward-button');
+const bambooStandInput = document.querySelector('#bamboo-stand-input');
+const bambooStandButton = document.querySelector('#bamboo-stand-button');
+const blackEditionInput = document.querySelector('#black-edition-input');
+const blackEditionButton = document.querySelector('#black-edition-button');
+const mahogamyInput = document.querySelector('#mahogamy-input');
+const mahogamyButton = document.querySelector('#mahogamy-button');
+
+function pledgeCheck(input){
+    switch(input){
+        case noRewardInput:
+            if(noRewardInput.value > 0){
+                toggleThankYou()
+            }else{
+                
+            }
+            break;
+        case bambooStandInput:
+            if(bambooStandInput.value >= 25){
+                toggleThankYou()
+            }else{
+                
+            }
+            break;
+        case blackEditionInput:
+            if(blackEditionInput.value >= 75){
+                toggleThankYou()
+            }else{
+                
+            }
+            break;
+        case mahogamyInput:
+            if(blackEditionInput.value >= 200){
+                toggleThankYou()
+            }else{
+                
+            }
+            break;
+    }
+}
+
+noRewardButton.addEventListener('click', () => pledgeCheck(noRewardInput));
+bambooStandButton.addEventListener('click', () => pledgeCheck(bambooStandInput));
+blackEditionButton.addEventListener('click', () => pledgeCheck(blackEditionInput));
+mahogamyButton.addEventListener('click', () => pledgeCheck(mahogamyInput));
+
