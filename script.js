@@ -128,15 +128,26 @@ blackEditionRadio.addEventListener('change', () => {
     hiddenMahogamy.classList.add('hide');
 });
 
-mahogamyRadio.addEventListener('change', () => {
 
-    pledgeNoReward.classList.remove('chosen-reward-box');
-    pledgeBambooStand.classList.remove('chosen-reward-box');
-    pledgeBlackEdition.classList.remove('chosen-reward-box');
-    pledgeMahogamy.classList.add('chosen-reward-box');
+const fadeThankYou = document.querySelector('#fade-bg-thank-you')
+const thankYouModal = document.querySelector('#thank-you')
+const continueButtons = document.querySelectorAll('.continue-button')
+const closeThankYou =  document.querySelector('#close-thank-you');
 
-    hiddenNoReward.classList.add('hide');
-    hiddenBambooStand.classList.add('hide');
-    hiddenBlackEdition.classList.add('hide');
-    hiddenMahogamy.classList.remove('hide');
-});
+
+continueButtons.forEach((button) =>{
+    button.addEventListener('click', () => toggleThankYou())
+})
+
+const toggleThankYou = () => {
+    modal.classList.add("hide");
+    fade.classList.add("hide");
+    thankYouModal.classList.remove("hide");
+    fadeThankYou.classList.remove("hide")
+}
+
+
+closeThankYou.addEventListener('click', () => {
+    thankYouModal.classList.add("hide");
+    fadeThankYou.classList.add('hide');
+})
