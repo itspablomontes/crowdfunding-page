@@ -159,34 +159,50 @@ const blackEditionButton = document.querySelector('#black-edition-button');
 const mahogamyInput = document.querySelector('#mahogamy-input');
 const mahogamyButton = document.querySelector('#mahogamy-button');
 
+const noRewardError = document.querySelector('.no-reward-error');
+const bambooStandError = document.querySelector('.bamboo-stand-error');
+const blackEditionError = document.querySelector('.black-edition-error');
+const mahogamyError = document.querySelector('.mahogamy-error');
+
+
+function toggleErrorMessage(error){
+
+}
+
+
+
 function pledgeCheck(input){
     switch(input){
         case noRewardInput:
             if(noRewardInput.value > 0){
                 toggleThankYou()
+                noRewardError.style.display = 'none'
             }else{
-                
+                noRewardError.style.display = 'flex'
             }
             break;
         case bambooStandInput:
             if(bambooStandInput.value >= 25){
                 toggleThankYou()
+                bambooStandError.style.display = 'none'
             }else{
-                
+                bambooStandError.style.display = 'flex'
             }
             break;
         case blackEditionInput:
             if(blackEditionInput.value >= 75){
                 toggleThankYou()
+                blackEditionError.style.display = 'none'
             }else{
-                
+                blackEditionError.style.display = 'flex'
             }
             break;
         case mahogamyInput:
-            if(blackEditionInput.value >= 200){
+            if(mahogamyInput.value >= 200){
                 toggleThankYou()
+                mahogamyError.style.display = 'none'
             }else{
-                
+                mahogamyError.style.display = 'flex'
             }
             break;
     }

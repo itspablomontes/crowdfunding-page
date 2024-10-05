@@ -397,6 +397,11 @@ nav{
     display: none;
 }
 .enter-pledge{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     color: hsl(0, 0%, 48%);
     font-weight: 500;
 }
@@ -449,7 +454,12 @@ input::-webkit-inner-spin-button {
 
 }
 .continue-button:hover{
-    background-color: hsl(176, 72%, 28%)
+    background-color: hsl(176, 72%, 28%);
+}
+.error{
+    display: none;
+    color: red;
+    font-weight: bold;
 }
 #thank-you{
     display: flex;
