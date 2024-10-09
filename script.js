@@ -167,18 +167,24 @@ const mahogamyError = document.querySelector('.mahogamy-error');
 const totalBacked = document.querySelector('#backed-value-number');
 const totalBackers = document.querySelector('#number-backers');
 
+const progressLine = document.querySelector('#progress-line')
+
+function measureProgress(updatedValue){
+    progressPercentage = updatedValue / 100000 * 100
+    progressPercentage <= 100 ? progressLine.style.width = `${progressPercentage}%` : progressLine.style.width = '100%';
+}
+
 function changeFundingValues(pledge){
     pledge = Number(pledge)
     let currentValue = parseInt(totalBacked.innerText.replace(/,/g, ''), 10);
     let currentBackers = parseInt(totalBackers.innerText.replace(/,/g, ''), 10);
     currentValue += pledge;
     currentBackers += 1;
+    measureProgress(currentValue)
     const formattedValue = currentValue.toLocaleString('en-US');
     const formattedBackers = currentBackers.toLocaleString('en-US')
     totalBacked.innerText = formattedValue;
     totalBackers.innerText = formattedBackers;
-    console.log(`Updated backed value: ${formattedValue}`);
-    console.log(`Updated backers count: ${formattedBackers}`);
 }
 
 
