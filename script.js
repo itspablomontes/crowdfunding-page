@@ -164,9 +164,21 @@ const bambooStandError = document.querySelector('.bamboo-stand-error');
 const blackEditionError = document.querySelector('.black-edition-error');
 const mahogamyError = document.querySelector('.mahogamy-error');
 
+const totalBacked = document.querySelector('#backed-value-number');
+const totalBackers = document.querySelector('#number-backers');
 
-function toggleErrorMessage(error){
-
+function changeFundingValues(pledge){
+    pledge = Number(pledge)
+    let currentValue = parseInt(totalBacked.innerText.replace(/,/g, ''), 10);
+    let currentBackers = parseInt(totalBackers.innerText.replace(/,/g, ''), 10);
+    currentValue += pledge;
+    currentBackers += 1;
+    const formattedValue = currentValue.toLocaleString('en-US');
+    const formattedBackers = currentBackers.toLocaleString('en-US')
+    totalBacked.innerText = formattedValue;
+    totalBackers.innerText = formattedBackers;
+    console.log(`Updated backed value: ${formattedValue}`);
+    console.log(`Updated backers count: ${formattedBackers}`);
 }
 
 
@@ -177,6 +189,7 @@ function pledgeCheck(input){
             if(noRewardInput.value > 0){
                 toggleThankYou()
                 noRewardError.style.display = 'none'
+                changeFundingValues(noRewardInput.value)
             }else{
                 noRewardError.style.display = 'flex'
             }
@@ -185,6 +198,7 @@ function pledgeCheck(input){
             if(bambooStandInput.value >= 25){
                 toggleThankYou()
                 bambooStandError.style.display = 'none'
+                changeFundingValues(bambooStandInput.value)
             }else{
                 bambooStandError.style.display = 'flex'
             }
@@ -193,6 +207,7 @@ function pledgeCheck(input){
             if(blackEditionInput.value >= 75){
                 toggleThankYou()
                 blackEditionError.style.display = 'none'
+                changeFundingValues(blackEditionInput.value)
             }else{
                 blackEditionError.style.display = 'flex'
             }
@@ -201,6 +216,7 @@ function pledgeCheck(input){
             if(mahogamyInput.value >= 200){
                 toggleThankYou()
                 mahogamyError.style.display = 'none'
+                changeFundingValues(mahogamyInput.value)
             }else{
                 mahogamyError.style.display = 'flex'
             }
